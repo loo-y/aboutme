@@ -15,11 +15,11 @@ const FallbackImage: React.FC<FallbackImageProps> = ({ src, fallbacks, className
     useEffect(() => {
         if (typeof window !== 'undefined') {
             // 只在客户端渲染
-            // @ts-ignore
             const img = new Image()
             img.onload = () => setImageSrc(img.src)
             img.onerror = () => {
                 const nextSrc = fallbacks && !_isEmpty(fallbacks) && fallbacks.shift()
+                console.log(`nextSrc`, nextSrc)
                 if (nextSrc) {
                     img.src = nextSrc
                 } else {
@@ -30,18 +30,15 @@ const FallbackImage: React.FC<FallbackImageProps> = ({ src, fallbacks, className
         }
     }, [src, fallbacks])
 
+    if (!imageSrc) return null
     return (
-        <div>
-            {imageSrc && (
-                <NextImage
-                    width={width || 100}
-                    height={height || 100}
-                    src={imageSrc}
-                    className={className || ''}
-                    alt="Fallback image"
-                />
-            )}
-        </div>
+        <NextImage
+            width={width || 100}
+            height={height || 100}
+            src={imageSrc}
+            className={className || ''}
+            alt="Fallback image"
+        />
     )
 }
 
