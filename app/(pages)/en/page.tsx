@@ -1,4 +1,5 @@
 'use client'
+import '../../style/light.css'
 import type { NextPage, GetServerSideProps } from 'next'
 import { Provider } from 'react-redux'
 import Experience from '@/app/components/Experience'
