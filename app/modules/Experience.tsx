@@ -25,7 +25,7 @@ const Experience = () => {
                         return (
                             <div
                                 key={`experience_${index}`}
-                                className="self-stretch justify-center items-start gap-2 inline-flex  mb-5 last:mb-0"
+                                className="self-stretch justify-center items-start gap-2 inline-flex  mb-6 last:mb-0"
                             >
                                 <div className="self-stretch flex-col justify-start items-center inline-flex">
                                     <div className="w-3 h-3 relative rounded-full">
@@ -53,21 +53,21 @@ const Experience = () => {
                                             ) : null}
                                         </div>
                                         <div className="self-stretch justify-start items-start gap-2 inline-flex w-full mt-2">
-                                            <div className="w-5 h-5 relative rounded shadow">
+                                            <div className="w-7 h-7 relative rounded shadow">
                                                 <img src={logo} />
                                             </div>
 
-                                            <div className="grow shrink basis-0 flex-col justify-end items-start gap-0.5 inline-flex ml-4">
+                                            <div className="grow shrink basis-0 flex-col justify-end items-start gap-0.5 inline-flex ml-2">
                                                 <div className="self-stretch text-slate-500 text-xs font-normal leading-3 tracking-tight">
                                                     {jobTitle}
                                                 </div>
-                                                <div className="self-stretch text-slate-800 text-sm font-medium leading-3 mt-1">
+                                                <div className="self-stretch text-stone-600 text-lg font-bold leading-3 mt-2">
                                                     {companyAbb}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="ml-10 pl-4 grow shrink basis-0 text-slate-500 text-xs font-normal tracking-tight ">
+                                    <div className="ml-4 pl-4 grow shrink basis-0 text-slate-500 text-sm font-normal tracking-tight ">
                                         <div className="float-right">{Responsibilities}</div>
                                     </div>
                                 </div>
