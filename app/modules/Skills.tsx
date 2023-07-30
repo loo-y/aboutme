@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState, Fragment } from 'react'
 import skills from '../api/mockinfo/skills'
 import { map as _map, isEmpty as _isEmpty } from 'lodash'
@@ -16,8 +17,8 @@ const Skills = () => {
     if (_isEmpty(categorys)) return null
     return (
         <div className="experience-module">
-            <div className="p-4 w-full flex-col justify-start items-start gap-4 inline-flex  min-w-[35rem]">
-                <div className="text-center text-slate-800 text-3xl font-medium leading-none tracking-tight">
+            <div className="p-4 w-full flex-col justify-start bg-white items-start gap-4 inline-flex  min-w-[35rem]">
+                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
                     Skills
                 </div>
 
@@ -58,8 +59,8 @@ const Skills = () => {
                                                 className={`self-stretch text-center text-${style}-500 text-sm font-medium leading-3`}
                                             >
                                                 <FallbackImage
-                                                    src={`/commonicons/${value.toLowerCase()}.svg`}
-                                                    fallbacks={[`/commonicons/${value.toLowerCase()}-light.svg`]}
+                                                    src={`./commonicons/${value.toLowerCase()}.svg`}
+                                                    fallbacks={[`./commonicons/${value.toLowerCase()}-light.svg`]}
                                                     className={'inline w-6 h-6 mr-2 relative bottom-[2px]'}
                                                 />
                                                 {value}
@@ -84,8 +85,8 @@ const Skills = () => {
                                             className={`grow shrink basis-0 px-2 py-10 text-center text-${style}-500 text-sm font-medium leading-3`}
                                         >
                                             <FallbackImage
-                                                src={`/commonicons/${value.toLowerCase()}.svg`}
-                                                fallbacks={[`/commonicons/${value.toLowerCase()}-light.svg`]}
+                                                src={`./commonicons/${value.toLowerCase()}.svg`}
+                                                fallbacks={[`./commonicons/${value.toLowerCase()}-light.svg`]}
                                                 className={'inline w-6 h-6 mr-2 relative bottom-[2px]'}
                                             />
                                             {value}

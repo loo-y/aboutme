@@ -7,7 +7,7 @@ const Education = () => {
     return (
         <div className="education-module">
             <div className="p-4 flex-col justify-start items-start gap-4 inline-flex w-full min-w-[40rem]">
-                <div className="text-center text-slate-800 text-3xl font-medium leading-none tracking-tight">
+                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
                     Education
                 </div>
                 <div className="self-stretch flex-col justify-start items-start pt-2 flex pb-2">
@@ -29,7 +29,7 @@ const Education = () => {
                                     <div className="text-slate-500 font-normal leading-3 tracking-tight text-sm py-2">
                                         {college}
                                     </div>
-                                    <div className="text-slate-800 relative font-medium leading-5 mb-2 text-lg">
+                                    <div className="text-slate-800 relative font-medium leading-5 mb-2 text-base">
                                         {schoolFull}
                                     </div>
                                 </div>

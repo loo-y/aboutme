@@ -1,3 +1,4 @@
+'use client'
 import NextImage from 'next/image'
 import { useState, useEffect } from 'react'
 import { isEmpty as _isEmpty } from 'lodash'
