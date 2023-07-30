@@ -13,7 +13,7 @@ export default {
                 'design and develop user interfaces using programming languages and frameworks such as HTML, CSS, and React. I collaborate with back-end developers to integrate the UI with application logic and ensure optimal performance.', // Job description/Responsibilities
         },
         {
-            logo: './commonicons/apple.svg', // company logo
+            logo: './commonicons/trip.svg', // company logo
             hireDate: 1690383378873, // Date of hire
             lastDay: 1690383378873, // Last day of work
             companyFullname: 'Trip', // Full name of the company
@@ -25,11 +25,11 @@ export default {
                 'create user interfaces and experiences for digital products, working closely with stakeholders to gather requirements and design wireframes, prototypes, and visual designs. I use design tools such as Sketch and Figma and conduct user testing to ensure usability and accessibility.', // Job description/Responsibilities
         },
         {
-            logo: './commonicons/apple.svg', // company logo
+            logo: './commonicons/microsoft.svg', // company logo
             hireDate: 1690383378873, // Date of hire
             lastDay: 1690383378873, // Last day of work
-            companyFullname: 'Apple', // Full name of the company
-            companyAbb: 'Apple', // Abbreviation of the company name
+            companyFullname: 'Microsoft', // Full name of the company
+            companyAbb: 'Microsoft', // Abbreviation of the company name
             jobTitle: 'Product Manager',
             city: 'Shanghai', // City of employment
             Responsibilities:

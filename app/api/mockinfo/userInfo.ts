@@ -1,7 +1,7 @@
 export default {
     data: {
         basicInfo: {
-            name: 'Chris Zhang',
+            name: 'Erik L',
             career: 'Full-Stack Developer',
             avatar: './user/avatar.jpg', // 头像
             snapshot: '', // 生活照
