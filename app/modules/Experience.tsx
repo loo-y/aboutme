@@ -2,13 +2,13 @@ import experience from '../api/mockinfo/experience'
 import { map as _map } from 'lodash'
 
 const Experience = () => {
-    const { data } = experience || {}
+    const { data, title } = experience || {}
 
     return (
         <div className="experience-module">
             <div className="p-4 w-full flex-col  justify-start items-start gap-4 inline-flex  min-w-[35rem]">
                 <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
-                    Experience
+                    {title}
                 </div>
                 <div className="self-stretch flex-col justify-start items-start pt-2 flex pb-2">
                     {_map(data, (item, index) => {

@@ -1,4 +1,5 @@
 export default {
+    title: 'Experience',
     data: [
         // Apple
         {

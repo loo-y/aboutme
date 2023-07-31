@@ -1,4 +1,5 @@
 export default {
+    title: 'Education',
     data: [
         {
             school: 'ECNU',
@@ -45,4 +46,5 @@ export default {
             minor: 'German',
         },
     ],
+    status: 0,
 }

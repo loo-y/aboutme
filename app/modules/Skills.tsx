@@ -5,7 +5,7 @@ import { map as _map, isEmpty as _isEmpty } from 'lodash'
 import FallbackImage from '../components/FallbackImage'
 
 const Skills = () => {
-    const { data } = skills || {}
+    const { data, title } = skills || {}
     const [categorys, setCategorys] = useState([])
     const [randomShowChunked, setRandomShowChunked] = useState<any[]>([])
     useEffect(() => {
@@ -19,7 +19,7 @@ const Skills = () => {
         <div className="experience-module">
             <div className="p-4 w-full flex-col justify-start bg-white items-start gap-4 inline-flex  min-w-[35rem]">
                 <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
-                    Skills
+                    {title}
                 </div>
 
                 <div className="self-stretch justify-start items-start mt-4 inline-flex">

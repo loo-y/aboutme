@@ -1,4 +1,5 @@
 export default {
+    title: 'SKills',
     data: [
         {
             category: 'Expert', // 专家
@@ -25,4 +26,5 @@ export default {
             list: ['php', 'python'],
         },
     ],
+    status: 0,
 }
