@@ -29,9 +29,10 @@ const Projects = () => {
                                         </div>
                                     </div>
                                     <div className="pl-4 grow shrink basis-0 tracking-tight">
-                                        <div className="float-right  text-sm">
-                                            <div className="text-blue-500 text-xs font-medium leading-3 cursor-pointer">
+                                        <div className="float-right text-sm">
+                                            <div className="text-blue-500 text-xs font-medium leading-3 cursor-pointer w-20 text-right">
                                                 Link
+                                                <img src="./misc/arrow-tr.svg" className="w-3 h-3 inline" />
                                             </div>
                                         </div>
                                     </div>
