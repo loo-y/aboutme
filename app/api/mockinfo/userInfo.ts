@@ -9,7 +9,7 @@ export default {
         },
         contactInfo: {
             email: 'youremail@internet.com',
-            website: 'https://your.website.com',
+            website: 'https://github.com/loo-y',
             phone: '13600000000',
             countryCode: '86',
             city: 'Shanghai',
@@ -17,8 +17,8 @@ export default {
         socials: [
             {
                 social: 'github',
-                account: '@yourgithub',
-                link: 'https://github.com/youraccount',
+                account: '@loo-y',
+                link: 'https://github.com/loo-y',
             },
             {
                 social: 'wechat',
