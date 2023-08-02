@@ -19,6 +19,8 @@ yarn dev
 # or
 pnpm dev
 ```
+then visit, <b> http://localhost:3000/en </b>
+<br />
 ## Installation and Deployment
 You can generate a pure static page by running npm run build, which can be deployed on various static servers.
 ```bash

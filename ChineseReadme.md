@@ -18,6 +18,8 @@ yarn dev
 # or
 pnpm dev
 ```
+然后访问： <b> http://localhost:3000/en </b>
+<br />
 
 ## 安装和部署
 您可以通过运行build生成一个纯静态页面，以便在各种静态服务器上部署该项目。
