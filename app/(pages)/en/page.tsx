@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 const En: NextPage<{ serverSideData: any }, any> = ({ serverSideData }: { serverSideData: any }) => {
     return (
         <div className="main flex">
-            <div className="left-pannel w-1/4 min-w-[11rem] h-auto pt-6 bg-slate-50">
+            <div className="left-pannel w-1/4 min-w-[11rem] h-auto py-6 bg-slate-50">
                 <UserInfo />
             </div>
-            <div className="right-pannel w-3/4 h-full pt-6 bg-white px-2">
+            <div className="right-pannel w-3/4 h-full py-6 bg-white px-2">
                 <Works />
                 <Experience />
                 <Education />

@@ -63,6 +63,15 @@ export default {
             { language: 'Cantonese', level: 'Intermediate' },
             { language: 'French', level: 'Beginner' },
         ],
+        hobbies: [
+            { hobby: 'Gaming', type: 'game' },
+            { hobby: 'Travelling', type: 'travel' },
+            { hobby: 'Photography', type: 'photography' },
+            { hobby: 'Badminton', type: 'badminton' },
+            { hobby: 'Coding', type: 'coding' },
+            { hobby: 'Design', type: 'design' },
+            { hobby: 'Music', type: 'music' },
+        ],
     },
     status: 0,
 }

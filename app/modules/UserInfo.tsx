@@ -7,7 +7,7 @@ import SocialInteractText from '../components/SocialInteractText'
 
 const UserInfo = () => {
     const { data } = userInfo || {}
-    const { basicInfo, contactInfo, socials, languages } = data || {}
+    const { basicInfo, contactInfo, socials, languages, hobbies } = data || {}
     return (
         <div className="relative userinfo-module ">
             <div className="min-w-[11rem] w-full h-96 p-6 left-0 top-0 absolute flex-col justify-start items-start gap-4 inline-flex">
@@ -30,6 +30,14 @@ const UserInfo = () => {
                             <div className="h-px w-full left-0 top-0 absolute bg-slate-200" />
                         </div>
                         <LanguagesBlock languages={languages} />
+                    </>
+                )}
+                {_isEmpty(hobbies) ? null : (
+                    <>
+                        <div className="w-full h-px relative">
+                            <div className="h-px w-full left-0 top-0 absolute bg-slate-200" />
+                        </div>
+                        <HobbiesInterestsBlock hobbies={hobbies} />
                     </>
                 )}
             </div>
@@ -198,6 +206,38 @@ const LanguagesBlock = ({ languages }: { languages: typeof userInfo.data.languag
     )
 }
 
+const HobbiesInterestsBlock = ({ hobbies }: { hobbies: typeof userInfo.data.hobbies }) => {
+    if (_isEmpty(hobbies)) return null
+    return (
+        <div className="languages-block">
+            <div className="self-stretch flex-col justify-start items-start gap-3 flex my-4">
+                <div className="self-stretch text-slate-500 text-lg font-bold leading-3 tracking-tight mb-2">
+                    Hobbies & Interests
+                </div>
+                {_map(hobbies, (hItem, hIndex) => {
+                    const { hobby, type } = hItem || {}
+                    return (
+                        <div
+                            key={`userinfo_languages_${hIndex}`}
+                            className="self-stretch justify-start items-center gap-1 inline-flex mb-4 last:mb-0"
+                        >
+                            <div className="w-5 h-5 relative">
+                                <div className="w-5 h-5 absolute ">
+                                    <FallbackImage src={`./commonicons/${type.toLowerCase()}.svg`} />
+                                </div>
+                            </div>
+                            <div className="ml-[0.2rem] grow shrink basis-0 flex-col justify-start items-start">
+                                <div className="self-stretch text-slate-600 text-xs font-medium leading-3 relative top-[1px]">
+                                    {upperFirstLetter(hobby)}
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+    )
+}
 // ********** helper **********
 const upperFirstLetter = (text: string): string => {
     return text.charAt(0).toUpperCase() + text.slice(1)
