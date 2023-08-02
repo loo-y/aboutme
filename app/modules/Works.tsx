@@ -1,6 +1,5 @@
 import works from '../api/mockinfo/works'
 import { map as _map, isEmpty as _isEmpty, chunk as _chunk } from 'lodash'
-import { Fragment } from 'react'
 
 const Works = () => {
     const { data, title } = works || {}
@@ -45,7 +44,9 @@ const Works = () => {
                                                     </div>
                                                     <div className="grow shrink h-full basis-0 flex-col justify-end items-start inline-flex relative top-[1px]">
                                                         <div className="text-indigo-500  text-xs font-bold leading-4 cursor-pointer">
-                                                            {link}
+                                                            <a href={link} target="_blank" className="inline">
+                                                                {link}
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -93,7 +94,9 @@ const Works = () => {
                                                         </div>
                                                         <div className="grow shrink h-full basis-0 flex-col justify-end items-start inline-flex relative top-[1px]">
                                                             <div className="text-indigo-500  text-xs font-bold leading-4 cursor-pointer">
-                                                                {link}
+                                                                <a href={link} target="_blank" className="inline">
+                                                                    {link}
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
