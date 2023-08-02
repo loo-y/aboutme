@@ -13,6 +13,7 @@ const Projects = () => {
                 <div className="self-stretch flex-col justify-start items-start pt-2 flex pb-2 relative">
                     {_map(data, (project, pIndex) => {
                         const { name, tags, descriptions } = project || {}
+                        const firstChar = getFirstCharEnglish(name, 'x')
                         const tagsText = _isEmpty(tags) ? undefined : tags.join(` · `)
                         return (
                             <div
@@ -23,7 +24,7 @@ const Projects = () => {
                                     <div className=" text-slate-700 tracking-tight relative h-5 w-[50rem]">
                                         <div className="absolute left-0 -top-[0.125rem]">
                                             <div className="left-0 -top-[2px] inline-block mr-2 justify-items-center rounded-sm relative">
-                                                <img src="./alphabet/A.svg" className="w-5 h-5 inline" />
+                                                <img src={`./alphabet/${firstChar}.svg`} className="w-5 h-5 inline" />
                                             </div>
                                             {name || ''}
                                         </div>
@@ -65,3 +66,19 @@ const Projects = () => {
 }
 
 export default Projects
+
+// ********** helper **********
+
+/**
+ * get fisrt English char from string, and return the default value if it's not English
+ * @param {string} text
+ * @param {string} defaultValue - optional
+ * @returns {string}
+ */
+const getFirstCharEnglish = (text: string, defaultValue?: string) => {
+    defaultValue = defaultValue || 'x'
+    if (/^[a-zA-Z]/.test(text)) {
+        return text[0].toUpperCase()
+    }
+    return defaultValue.toUpperCase()
+}
