@@ -23,7 +23,7 @@ export default {
             {
                 social: 'wechat',
                 account: '@yourwechat',
-                qrcode: './userinfo/wechat_qrcode.png',
+                qrcode: './user/wechat_qrcode.jpg',
             },
             {
                 social: 'weibo',
