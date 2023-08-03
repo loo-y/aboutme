@@ -7,6 +7,7 @@ module.exports = {
   //     whitelist: ['text-violet-800'],
   //   },
   // },
+  darkMode: 'class',
   safelist: [ 
     {
     pattern: /text-(emerald|violet|orange|slate|gray)-(500)/,

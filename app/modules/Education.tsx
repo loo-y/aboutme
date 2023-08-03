@@ -7,7 +7,7 @@ const Education = () => {
     return (
         <div className="education-module">
             <div className="p-4 flex-col justify-start items-start gap-4 inline-flex w-full min-w-[40rem]">
-                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
+                <div className="text-center text-slate-800 dark:text-white text-2xl font-medium leading-none tracking-tight">
                     {title}
                 </div>
                 <div className="self-stretch flex-col justify-start items-start pt-2 flex pb-2">
