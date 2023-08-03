@@ -2,8 +2,7 @@
 
 
 ### DEMO
-You can see the demo <b>[here](https://aboutme.viku.org/)</b>.
-
+You can view a <b>[demo](https://aboutme.viku.org/)</b>, which is deployed on Cloudflare Pages. Alternatively, you can build this project locally to obtain the static files and deploy them to any static server of your choice.
 ## Project Overview
 
 This project is a pure front-end website based on the Next.js framework, designed to showcase and introduce personal information. The website's style and structure are based on the Figma public template [Supa Resume](https://www.figma.com/community/file/1087586245868299560).

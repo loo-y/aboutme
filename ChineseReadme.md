@@ -1,8 +1,7 @@
 [English](./readme.md)
 
 ### DEMO
-您可以在 <b>[这里](https://aboutme.viku.org/)</b> 看到 Demo。
-
+您可以查看 <b>[演示](https://aboutme.viku.org/)</b>，已部署在 Cloudflare Pages。您同样可以在本地build本项目以获取静态文件，并将其部署到任意静态服务器上。
 ## 项目概述
 该项目是一个基于Next.js框架的纯前端网站，旨在展示和介绍个人信息。网站的样式结构来源于Figma公开模版 [Supa Resume](https://www.figma.com/community/file/1087586245868299560)。
 <br />
