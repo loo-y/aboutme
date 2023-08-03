@@ -1,5 +1,9 @@
 [中文](./ChineseReadme.md)
 
+
+### DEMO
+You can see the demo <b>[here](https://aboutme.viku.org/)</b>.
+
 ## Project Overview
 
 This project is a pure front-end website based on the Next.js framework, designed to showcase and introduce personal information. The website's style and structure are based on the Figma public template [Supa Resume](https://www.figma.com/community/file/1087586245868299560).
