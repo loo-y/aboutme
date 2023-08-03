@@ -16,7 +16,7 @@ const Skills = () => {
 
     if (_isEmpty(categorys)) return null
     return (
-        <div className="experience-module">
+        <div className="skills-module">
             <div className="p-4 w-full flex-col justify-start bg-white items-start gap-4 inline-flex  min-w-[35rem]">
                 <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
                     {title}
@@ -46,14 +46,21 @@ const Skills = () => {
                         return (
                             <div
                                 key={`skill_row_${rcl_index}_split`}
-                                className="self-stretch grow shrink basis-0 justify-start items-start gap-1 inline-flex"
+                                className="self-stretch grow shrink basis-0 justify-start items-start gap-2 inline-flex"
                             >
                                 {_map(chunkedList, (cl, cl_index) => {
                                     const { value, style } = cl || {}
+                                    if (_isEmpty(value))
+                                        return (
+                                            <div
+                                                key={`skill_row_${rcl_index}_col_${cl_index}_split`}
+                                                className="grow shrink basis-0 self-stretch px-2 py-4 rounded-tl flex-col justify-center items-start gap-0.5 inline-flex"
+                                            ></div>
+                                        )
                                     return (
                                         <div
                                             key={`skill_row_${rcl_index}_col_${cl_index}_split`}
-                                            className="grow shrink basis-0 self-stretch px-2 py-10 bg-slate-50 rounded-tl flex-col justify-center items-start gap-0.5 inline-flex"
+                                            className="grow shrink basis-0 self-stretch px-2 py-4 bg-slate-50 rounded-tl flex-col justify-center items-start gap-0.5 inline-flex"
                                         >
                                             <div
                                                 className={`self-stretch text-center text-${style}-500 text-sm font-medium leading-3`}
@@ -143,11 +150,11 @@ function sortSkills({ skillInfo }: SortSkillsProps) {
         )
     })
 
-    chunkedList = randomChunk(list, [3, 4, 5])
+    chunkedList = randomChunk(list, [5])
     _map(chunkedList, cl => {
         randomShowChunked.push({
             list: cl,
-            splitOrCombine: Math.random() > 0.5,
+            splitOrCombine: true, // Math.random() > 0.5,
         })
     })
     return {
@@ -172,7 +179,8 @@ function randomChunk<T>(array: T[], chunkSize?: number[]): T[][] {
     // 当最后一个太小时，拿倒数第二个补一位
     if (!chunkSize.includes(result[resultLength - 1].length)) {
         // @ts-ignore
-        result[resultLength - 1].unshift(result[resultLength - 2].pop())
+        result[resultLength - 1] = result[resultLength - 1].concat([undefined])
     }
+    console.log(`result`, result)
     return result
 }

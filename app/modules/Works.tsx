@@ -5,7 +5,7 @@ const Works = () => {
     const { data, title } = works || {}
     const displayList = _isEmpty(data) ? [] : _chunk(data, 2)
     return (
-        <div className="projects-module">
+        <div className="works-module">
             <div className="p-4 w-full flex-col  justify-start items-start gap-4 inline-flex  min-w-[35rem]">
                 <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
                     {title}

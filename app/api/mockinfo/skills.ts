@@ -23,7 +23,7 @@ export default {
             category: 'Familiar', // 了解
             logo: './misc/familiar.svg',
             style: 'gray',
-            list: ['php', 'python'],
+            list: ['php', 'python', 'jest'],
         },
     ],
     status: 0,

@@ -7,6 +7,7 @@ import Skills from '@/app/modules/Skills'
 import UserInfo from '@/app/modules/UserInfo'
 import Projects from '@/app/modules/Projects'
 import Works from '@/app/modules/Works'
+import Tools from '@/app/modules/Tools'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ const En: NextPage<{ serverSideData: any }, any> = ({ serverSideData }: { server
                 <Education />
                 <Skills />
                 <Projects />
+                <Tools />
             </div>
         </div>
     )

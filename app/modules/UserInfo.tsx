@@ -50,7 +50,7 @@ export default UserInfo
 const BasicInfoBlock = ({ basicInfo }: { basicInfo: typeof userInfo.data.basicInfo }) => {
     const { bio, name, career, snapshot, avatar } = basicInfo || {}
     return (
-        <div className="basicinfo-block mb-4">
+        <div className="userinfo-module basicinfo-block mb-4">
             <div className="name-and-pic self-stretch  min-h-[6rem] flex-col justify-center items-start gap-2 flex">
                 {avatar ? <img className=" w-[6rem] h-[6rem] rounded-full" src={avatar} /> : null}
                 {/* <img className="w-12 h-12 rounded-full" src="https://via.placeholder.com/48x48" /> */}
