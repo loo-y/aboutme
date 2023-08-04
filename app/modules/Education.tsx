@@ -20,10 +20,10 @@ const Education = () => {
                                 key={`education_${index}`}
                                 className={` eduitem w-full px-3 py-2 ${
                                     isPresent ? 'bg-violet-50' : 'bg-slate-50'
-                                } rounded-md justify-start items-start gap-2 inline-flex mb-5 last:mb-0`}
+                                } self-stretch grow shrink basis-0 justify-center items-center gap-2 inline-flex mb-5 last:mb-0`}
                             >
-                                <div className=" h-16 relative rounded">
-                                    <img src={logo} className="inline w-full h-full" />
+                                <div className="relative flex-col inline-flex justify-center items-center rounded">
+                                    <img src={logo} className="inline h-16" />
                                 </div>
                                 <div className="grow shrink basis-0 relative self-stretch flex-col justify-center items-start gap-0.5 inline-flex ml-2">
                                     <div className="text-slate-500 font-normal leading-3 tracking-tight text-sm py-2">
