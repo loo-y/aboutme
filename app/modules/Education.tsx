@@ -6,7 +6,7 @@ const Education = () => {
 
     return (
         <div className="education-module">
-            <div className="p-4 flex-col justify-start items-start gap-4 inline-flex w-full min-w-[40rem]">
+            <div className="p-4 flex-col justify-start items-start gap-4 inline-flex w-full min-w-[36rem]">
                 <div className="text-center text-slate-800 dark:text-white text-2xl font-medium leading-none tracking-tight">
                     {title}
                 </div>
@@ -19,17 +19,17 @@ const Education = () => {
                             <div
                                 key={`education_${index}`}
                                 className={` eduitem w-full px-3 py-2 ${
-                                    isPresent ? 'bg-violet-50' : 'bg-slate-50'
+                                    isPresent ? 'bg-violet-50' : 'bg-slate-50 dark:bg-gray-900'
                                 } self-stretch grow shrink basis-0 justify-center items-center gap-2 inline-flex mb-5 last:mb-0`}
                             >
                                 <div className="relative flex-col inline-flex justify-center items-center rounded">
                                     <img src={logo} className="inline h-16" />
                                 </div>
-                                <div className="grow shrink basis-0 relative self-stretch flex-col justify-center items-start gap-0.5 inline-flex ml-2">
-                                    <div className="text-slate-500 font-normal leading-3 tracking-tight text-sm py-2">
+                                <div className="grow shrink basis-0 relative self-stretch flex-col justify-center items-start gap-1 inline-flex ml-2">
+                                    <div className="text-slate-500 font-normal  tracking-tight text-sm  line-clamp-1">
                                         {college}
                                     </div>
-                                    <div className="text-slate-800 relative font-medium leading-5 mb-2 text-base">
+                                    <div className="text-slate-800 relative font-medium leading-5 text-base line-clamp-2 mb-1">
                                         {schoolFull}
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@ const Education = () => {
                                     </div>
                                     <div className="justify-center items-center gap-1 inline-flex">
                                         <div className="justify-center items-center gap-0.5 flex">
-                                            <div className="text-slate-500 text-sm font-bold tracking-tight">
+                                            <div className="text-slate-500 text-sm font-bold tracking-tight mt-0.5">
                                                 <span>{major}</span>
                                                 {degree ? (
                                                     <>
