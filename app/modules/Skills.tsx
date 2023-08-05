@@ -60,7 +60,7 @@ const Skills = () => {
                                     return (
                                         <div
                                             key={`skill_row_${rcl_index}_col_${cl_index}_split`}
-                                            className="grow shrink basis-0 self-stretch px-2 py-4 bg-slate-50 shadow-slate-600/20 shadow-lg dark:shadow-slate-700/50 dark:shadow-xl rounded-tl rounded-br rounded-2xl flex-col justify-center items-start gap-0.5 inline-flex dark:bg-slate-900"
+                                            className="cursor-grab active:cursor-grabbing grow shrink basis-0 self-stretch px-2 py-4 bg-slate-50 hover:shadow-slate-800/30 shadow-lg hover:dark:shadow-slate-600/60 dark:shadow-xl rounded-tl rounded-br rounded-2xl flex-col justify-center items-start gap-0.5 inline-flex dark:bg-slate-900"
                                         >
                                             <div
                                                 className={`self-stretch text-center text-${style}-500 text-sm font-medium leading-3`}
