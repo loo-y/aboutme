@@ -15,7 +15,7 @@ export const metadata = rootMetadata
 const En: NextPage<{ serverSideData: any }, any> = ({ serverSideData }: { serverSideData: any }) => {
     return (
         <div className="main flex">
-            <div className="left-pannel w-1/4 min-w-[13rem] h-auto py-6 bg-slate-50 dark:bg-gray-700">
+            <div className="left-pannel w-1/4 min-w-[13rem] h-auto pb-6 bg-slate-50 dark:bg-gray-700">
                 <UserInfo />
             </div>
             <div className="right-pannel w-3/4 min-w-[39rem] h-full py-6 bg-white px-2 dark:bg-slate-800">

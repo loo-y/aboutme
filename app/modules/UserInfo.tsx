@@ -8,7 +8,7 @@ const UserInfo = () => {
     const { data } = userInfo || {}
     const { basicInfo, contactInfo, socials, languages, hobbies } = data || {}
     return (
-        <div className="relative userinfo-module ">
+        <div className="relative userinfo-module pt-6">
             <div className="min-w-[11rem] w-full h-96 p-6 left-0 top-0 absolute flex-col justify-start items-start gap-4 inline-flex">
                 <BasicInfoBlock basicInfo={basicInfo} />
                 <div className="w-full h-px relative">
@@ -51,8 +51,15 @@ const BasicInfoBlock = ({ basicInfo }: { basicInfo: typeof userInfo.data.basicIn
     return (
         <div className="userinfo-module basicinfo-block mb-4">
             <div className="name-and-pic self-stretch  min-h-[6rem] flex-col justify-center items-start gap-2 flex">
-                {avatar ? <img className=" w-[6rem] h-[6rem] rounded-full" src={avatar} /> : null}
-                {/* <img className="w-12 h-12 rounded-full" src="https://via.placeholder.com/48x48" /> */}
+                {snapshot ? (
+                    <div className=" overflow-visible w-full h-32 mb-2">
+                        <div className="w-full absolute top-0 left-0 max-h-40 overflow-hidden">
+                            <img className="inline" src={snapshot} />
+                        </div>
+                    </div>
+                ) : avatar ? (
+                    <img className=" w-[6rem] h-[6rem] rounded-full" src={avatar} />
+                ) : null}
                 <div className="flex-col justify-center items-start gap-3 flex mt-1">
                     <div className="self-stretch min-h-[2.5rem] flex-col justify-start items-start gap-1 flex after:clear-both">
                         <div className="self-stretch text-slate-800 text-2xl font-medium leading-tight dark:text-slate-300">
