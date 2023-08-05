@@ -1,18 +1,19 @@
 'use client'
-
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 interface SwitchDarkProps {
     initSwitch?: boolean
     callback?: (isDark: boolean) => void
 }
+
 const SwitchDark = ({ initSwitch = false, callback }: SwitchDarkProps) => {
-    console.log(`initSwitch`, initSwitch)
     const [isSwitch, setIsSwitch] = useState(initSwitch)
     const handleSwitch = () => {
         setIsSwitch(!isSwitch)
         if (callback) callback(!isSwitch)
     }
-
+    useEffect(() => {
+        setIsSwitch(initSwitch)
+    }, [initSwitch])
     return (
         <div
             className={`w-14 h-7 bg-slate-400 bg-opacity-50  rounded-2xl  py-0.5 px-[0.2rem] flex relative cursor-pointer ease-linear duration-500 ${

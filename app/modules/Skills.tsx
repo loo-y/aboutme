@@ -17,8 +17,8 @@ const Skills = () => {
     if (_isEmpty(categorys)) return null
     return (
         <div className="skills-module">
-            <div className="p-4 w-full flex-col justify-start bg-white items-start gap-4 inline-flex  min-w-[35rem]">
-                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
+            <div className="p-4 w-full flex-col justify-start items-start gap-4 inline-flex  min-w-[35rem]">
+                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight dark:text-zinc-200">
                     {title}
                 </div>
 
@@ -30,7 +30,7 @@ const Skills = () => {
                                 key={`skill_${c_index}`}
                                 className="h-4 pb-1 rounded-tl relative justify-start items-start gap-1 inline-flex mr-8"
                             >
-                                <div className="w-5 h-5 relative -top-1 bg-violet-100 rounded-full">
+                                <div className="w-5 h-5 relative -top-1 bg-violet-100 rounded-full dark:bg-stone-200">
                                     <div className="w-3 h-3 left-1 top-1 absolute">
                                         <img src={logo} />
                                     </div>
@@ -60,7 +60,7 @@ const Skills = () => {
                                     return (
                                         <div
                                             key={`skill_row_${rcl_index}_col_${cl_index}_split`}
-                                            className="grow shrink basis-0 self-stretch px-2 py-4 bg-slate-50 rounded-tl flex-col justify-center items-start gap-0.5 inline-flex"
+                                            className="grow shrink basis-0 self-stretch px-2 py-4 bg-slate-50 shadow-slate-600/20 shadow-lg dark:shadow-slate-700/50 dark:shadow-xl rounded-tl rounded-br rounded-2xl flex-col justify-center items-start gap-0.5 inline-flex dark:bg-slate-900"
                                         >
                                             <div
                                                 className={`self-stretch text-center text-${style}-500 text-sm font-medium leading-3`}
@@ -82,7 +82,7 @@ const Skills = () => {
                     return (
                         <div
                             key={`skill_row_${rcl_index}_combine`}
-                            className="self-stretch grow shrink basis-0 p-2 bg-slate-50 justify-center items-center gap-1 inline-flex"
+                            className="self-stretch grow shrink basis-0 p-2 bg-slate-50 justify-center items-center gap-1 inline-flex dark:bg-slate-900"
                         >
                             {_map(chunkedList, (cl, cl_index) => {
                                 const { value, style } = cl || {}
@@ -181,6 +181,5 @@ function randomChunk<T>(array: T[], chunkSize?: number[]): T[][] {
         // @ts-ignore
         result[resultLength - 1] = result[resultLength - 1].concat([undefined])
     }
-    console.log(`result`, result)
     return result
 }

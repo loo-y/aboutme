@@ -8,12 +8,9 @@ import UserInfo from '@/app/modules/UserInfo'
 import Projects from '@/app/modules/Projects'
 import Works from '@/app/modules/Works'
 import Tools from '@/app/modules/Tools'
-import { Metadata } from 'next'
+import { metadata as rootMetadata } from '@/app/layout'
 
-export const metadata: Metadata = {
-    title: 'About Me',
-    description: 'About Me',
-}
+export const metadata = rootMetadata
 
 const En: NextPage<{ serverSideData: any }, any> = ({ serverSideData }: { serverSideData: any }) => {
     return (

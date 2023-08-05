@@ -20,7 +20,6 @@ const FallbackImage: React.FC<FallbackImageProps> = ({ src, fallbacks, className
             img.onload = () => setImageSrc(img.src)
             img.onerror = () => {
                 const nextSrc = fallbacks && !_isEmpty(fallbacks) && fallbacks.shift()
-                console.log(`nextSrc`, nextSrc)
                 if (nextSrc) {
                     img.src = nextSrc
                 } else {

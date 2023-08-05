@@ -8,7 +8,7 @@ const Works = () => {
     return (
         <div className="works-module">
             <div className="p-4 w-full flex-col  justify-start items-start gap-4 inline-flex  min-w-[35rem]">
-                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight dark:text-stone-200">
+                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight dark:text-zinc-200">
                     {title}
                 </div>
                 <div className="self-stretch flex-col justify-start items-start pt-2 flex pb-2 relative gap-[1rem]">
