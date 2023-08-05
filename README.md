@@ -10,7 +10,15 @@ This project is a pure front-end website based on the Next.js framework, designe
 The website already includes icons for some social media and office tools, and you do not need to manually specify them as the project will automatically search for the corresponding icon based on its name.
 <br />
 <br />
-<img src="./public/preview/page-snapshot01.png" width="800px"/>
+<img src="./public/preview/page-snapshot03.png" width="800px"/>
+<br />
+Now there is a feature <b>dark mode</b>, with a one-click toggle in the top right corner.
+<br />
+<img src="./public/preview/page-snapshot02.png" width="800px"/>
+<br />
+display a popvover of QR code on mouse hover.
+<br/>
+<img src="./public/preview/page-snapshot-qrcode.png" width="300px"/>
 <br />
 
 ## Getting Started
@@ -39,4 +47,3 @@ Before using the project, you need to modify the JSON file under the [app/api/mo
 
 The website currently only supports English content display, but Chinese content display will be added later. You can also try to modify the zh page based on the en page.
 <br>
-We will also add a dark mode later to provide a better user experience.
