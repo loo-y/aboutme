@@ -2,7 +2,7 @@
 import { useEffect, useState, Fragment } from 'react'
 import skills from '../api/mockinfo/skills'
 import { map as _map, isEmpty as _isEmpty } from 'lodash'
-import FallbackImage from '../components/FallbackImage'
+import SVGbyTheme from '../components/SVGbyTheme'
 
 const Skills = () => {
     const { data, title } = skills || {}
@@ -65,11 +65,12 @@ const Skills = () => {
                                             <div
                                                 className={`self-stretch text-center text-${style}-500 text-sm font-medium leading-3`}
                                             >
-                                                <FallbackImage
-                                                    src={`./commonicons/${value.toLowerCase()}.svg`}
-                                                    fallbacks={[`./commonicons/${value.toLowerCase()}-light.svg`]}
+                                                <SVGbyTheme
+                                                    svg={`./commonicons/${value.toLowerCase()}.svg`}
+                                                    isReserve={true}
                                                     className={'inline w-6 h-6 mr-2 relative bottom-[2px]'}
                                                 />
+
                                                 {value}
                                             </div>
                                         </div>
@@ -91,9 +92,9 @@ const Skills = () => {
                                         <div
                                             className={`grow shrink basis-0 px-2 py-10 text-center text-${style}-500 text-sm font-medium leading-3`}
                                         >
-                                            <FallbackImage
-                                                src={`./commonicons/${value.toLowerCase()}.svg`}
-                                                fallbacks={[`./commonicons/${value.toLowerCase()}-light.svg`]}
+                                            <SVGbyTheme
+                                                svg={`./commonicons/${value.toLowerCase()}.svg`}
+                                                isReserve={true}
                                                 className={'inline w-6 h-6 mr-2 relative bottom-[2px]'}
                                             />
                                             {value}

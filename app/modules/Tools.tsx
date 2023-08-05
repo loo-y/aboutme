@@ -2,6 +2,7 @@ import { useEffect, useState, Fragment } from 'react'
 import tools from '../api/mockinfo/tools'
 import { map as _map, isEmpty as _isEmpty, chunk as _chunk } from 'lodash'
 import FallbackImage from '../components/FallbackImage'
+import SVGbyTheme from '../components/SVGbyTheme'
 
 const Tools = () => {
     const { data, title } = tools || {}
@@ -10,8 +11,8 @@ const Tools = () => {
     if (_isEmpty(data)) return null
     return (
         <div className="tools-module">
-            <div className="p-4 w-full flex-col justify-start bg-white items-start gap-4 inline-flex  min-w-[35rem]">
-                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
+            <div className="p-4 w-full flex-col justify-start  items-start gap-4 inline-flex  min-w-[35rem]">
+                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight dark:text-zinc-200">
                     {title}
                 </div>
                 <div className="self-stretch justify-start items-start mt-2 flex-col gap-2 flex">
@@ -33,24 +34,21 @@ const Tools = () => {
                                     return (
                                         <div
                                             key={`tools_${rowIndex}_${toolIndex}`}
-                                            className="flex-grow  bg-slate-100 justify-center items-center gap-2 flex flex-col px-2 py-6 w-1/4"
+                                            className="flex-grow  bg-slate-100 justify-center items-center gap-2 flex flex-col px-2 py-6 w-1/4 dark:bg-slate-700"
                                         >
                                             <div className="relative flex h-16 w-16">
-                                                <FallbackImage
-                                                    src={`${imagePath}${name}.svg`}
-                                                    fallbacks={[
-                                                        `${imagePath}${name}-light.svg`,
-                                                        `${imagePath}${name}-dark.svg`,
-                                                    ]}
+                                                <SVGbyTheme
+                                                    svg={`${imagePath}${name}.svg`}
+                                                    isReserve={true}
                                                     className="w-full"
                                                 />
                                             </div>
                                             <div className="flex-col justify-center items-center gap-px flex">
-                                                <div className="text-slate-800 text-xs font-medium leading-3">
+                                                <div className="text-slate-800 text-xs font-medium leading-3 dark:text-gray-200">
                                                     {title}
                                                 </div>
                                                 {desc ? (
-                                                    <div className="text-slate-500 text-xs font-normal tracking-tight mt-1 justify-center items-center text-center whitespace-pre-line line-clamp-1">
+                                                    <div className="text-slate-500 dark:text-gray-400 text-xs font-normal tracking-tight mt-1 justify-center items-center text-center whitespace-pre-line line-clamp-1">
                                                         {desc}
                                                     </div>
                                                 ) : null}

@@ -7,7 +7,7 @@ const Projects = () => {
     return (
         <div className="projects-module">
             <div className="p-4 w-full flex-col  justify-start items-start gap-4 inline-flex  min-w-[35rem]">
-                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight">
+                <div className="text-center text-slate-800 text-2xl font-medium leading-none tracking-tight dark:text-zinc-200">
                     {title}
                 </div>
                 <div className="self-stretch flex-col justify-start items-start pt-2 flex pb-2 relative">
@@ -21,7 +21,7 @@ const Projects = () => {
                                 key={`projects_${pIndex}`}
                             >
                                 <div className="top-info grow shrink basis-0 text-lg font-medium self-stretch mb-0.5 justify-center items-end gap-1 flex align-text-bottom">
-                                    <div className=" text-slate-700 tracking-tight relative h-5 w-[50rem]">
+                                    <div className=" text-slate-700 tracking-tight relative h-5 w-[50rem] dark:text-stone-200">
                                         <div className="absolute left-0 -top-[0.125rem]">
                                             <div className="left-0 -top-[2px] inline-block mr-2 justify-items-center rounded-sm relative">
                                                 <img src={`./alphabet/${firstChar}.svg`} className="w-5 h-5 inline" />
@@ -41,10 +41,12 @@ const Projects = () => {
                                 <div className="flex-col h-[2px] bg-slate-300 w-full mt-1 mb-2" />
                                 <div className="flex-col text-xs">
                                     {tagsText ? (
-                                        <div className="tags text-slate-400  font-medium leading-3">{tagsText}</div>
+                                        <div className="tags text-slate-400  font-medium leading-3 dark:text-gray-400">
+                                            {tagsText}
+                                        </div>
                                     ) : null}
                                     {descriptions ? (
-                                        <div className="desc text-slate-600 text-sm font-normal leading-1 mt-2">
+                                        <div className="desc text-slate-600 text-sm font-normal leading-1 mt-2 dark:text-gray-300">
                                             {_map(descriptions, (desc, descIndex) => {
                                                 return (
                                                     <Fragment key={`projects_${pIndex}_desc_${descIndex}`}>
