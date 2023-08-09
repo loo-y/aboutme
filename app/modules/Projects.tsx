@@ -1,6 +1,7 @@
 import projects from '../api/mockinfo/projects'
 import { map as _map, isEmpty as _isEmpty } from 'lodash'
 import { Fragment } from 'react'
+import AlphabetSvg, { UPPERLOWER } from '../components/AlphabetSvg'
 
 const Projects = () => {
     const { data, title } = projects || {}
@@ -24,7 +25,12 @@ const Projects = () => {
                                     <div className=" text-slate-700 tracking-tight relative h-5 w-[50rem] dark:text-stone-200">
                                         <div className="absolute left-0 -top-[0.125rem]">
                                             <div className="left-0 -top-[2px] inline-block mr-2 justify-items-center rounded-sm relative">
-                                                <img src={`./alphabet/${firstChar}.svg`} className="w-5 h-5 inline" />
+                                                <AlphabetSvg
+                                                    text={name}
+                                                    upperOrLower={UPPERLOWER.upper}
+                                                    className="w-5 h-5 inline"
+                                                    asImg={true}
+                                                />
                                             </div>
                                             {name || ''}
                                         </div>
