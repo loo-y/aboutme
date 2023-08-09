@@ -4,7 +4,7 @@ export default {
             name: 'Erik L',
             career: 'Full-Stack Developer',
             avatar: './user/avatar.jpg', // 头像
-            snapshot: '/user/snapshot.png', // 生活照
+            snapshot: './user/snapshot.png', // 生活照
             bio: 'All work and no play makes Jack a dull boy.',
         },
         contactInfo: {
