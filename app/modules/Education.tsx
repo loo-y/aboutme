@@ -1,5 +1,6 @@
 import education from '../api/mockinfo/education'
 import { map as _map } from 'lodash'
+import { formatEnDateMY, isValidDate } from '@/app/util/date'
 
 const Education = () => {
     const { data, title } = education || {}
@@ -14,7 +15,9 @@ const Education = () => {
                     {_map(data, (eduItem, index) => {
                         const { school, schoolFull, startDate, college, graduationDate, logo, major, minor, degree } =
                             eduItem || {}
-                        const isPresent = isNaN(graduationDate as any)
+                        const isPresent = !isValidDate(graduationDate)
+                        const startDateFormatted = formatEnDateMY(startDate)
+                        const graduationDateFormatted = isPresent ? `isPresent` : formatEnDateMY(graduationDate)
                         return (
                             <div
                                 key={`education_${index}`}
@@ -35,8 +38,10 @@ const Education = () => {
                                 </div>
                                 <div className="self-stretch flex-col justify-start items-end gap-1 inline-flex max-w-[30rem] ml-3">
                                     <div
-                                        className={`px-2 py-2 align-text-top ${
-                                            isPresent ? 'bg-violet-100 dark:bg-violet-900 rounded-md' : 'rounded-sm'
+                                        className={`py-2 align-text-top ${
+                                            isPresent
+                                                ? 'px-2 bg-violet-100 dark:bg-violet-900 rounded-md'
+                                                : 'pl-2 rounded-sm'
                                         }  flex-col justify-center items-center flex`}
                                     >
                                         <div
@@ -46,7 +51,9 @@ const Education = () => {
                                                     : 'text-slate-500 dark:text-stone-400'
                                             } text-xs font-normal leading-3 tracking-tight`}
                                         >
-                                            {isPresent ? 'Present' : 'Sep 2010 - Jul 2013'}
+                                            {isPresent
+                                                ? graduationDateFormatted
+                                                : `${startDateFormatted} - ${graduationDateFormatted}`}
                                         </div>
                                     </div>
                                     <div className="justify-center items-center gap-1 inline-flex">

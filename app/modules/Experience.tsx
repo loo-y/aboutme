@@ -1,5 +1,6 @@
 import experience from '../api/mockinfo/experience'
 import { map as _map } from 'lodash'
+import { formatEnDateMY } from '@/app/util/date'
 
 const Experience = () => {
     const { data, title } = experience || {}
@@ -22,6 +23,8 @@ const Experience = () => {
                             city,
                             Responsibilities,
                         } = item || {}
+                        const hireDateFormatted = formatEnDateMY(hireDate)
+                        const lastDayFormatted = formatEnDateMY(lastDay)
                         return (
                             <div
                                 key={`experience_${index}`}
@@ -39,7 +42,7 @@ const Experience = () => {
                                     <div className=" min-w-[10rem] text-xs">
                                         <div className="">
                                             <div className="text-slate-600 text-xs font-normal tracking-tight float-left dark:text-stone-400">
-                                                Sep 2010 - Jul 2013
+                                                {hireDateFormatted} - {lastDayFormatted}
                                             </div>
                                             {city ? (
                                                 <div className="float-right ml-2">
