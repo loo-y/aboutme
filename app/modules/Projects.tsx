@@ -23,7 +23,7 @@ const Projects = () => {
                             >
                                 <div className="top-info grow shrink basis-0 text-lg font-medium self-stretch mb-0.5 justify-center items-end gap-1 flex align-text-bottom">
                                     <div className=" text-slate-700 tracking-tight relative h-5 w-[50rem] dark:text-stone-200">
-                                        <div className="absolute left-0 -top-[0.125rem]">
+                                        <div className="absolute left-0 -top-[0.125rem] line-clamp-1">
                                             <div className="left-0 -top-[2px] inline-block mr-2 justify-items-center rounded-sm relative">
                                                 <AlphabetSvg
                                                     text={name}
