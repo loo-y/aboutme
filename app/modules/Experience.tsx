@@ -39,7 +39,7 @@ const Experience = () => {
                                     </div>
                                 </div>
                                 <div className="grow shrink basis-0 self-stretch pt-0.5 justify-center items-start gap-1 flex">
-                                    <div className=" min-w-[10rem] text-xs">
+                                    <div className=" min-w-[10rem] text-xs basis-3/12">
                                         <div className="">
                                             <div className="text-slate-600 text-xs font-normal tracking-tight float-left dark:text-stone-400">
                                                 {hireDateFormatted} - {lastDayFormatted}
@@ -64,7 +64,7 @@ const Experience = () => {
                                                 <div className="self-stretch text-slate-500 text-xs font-normal leading-3 tracking-tight dark:text-stone-300">
                                                     {jobTitle}
                                                 </div>
-                                                <div className="self-stretch text-stone-600 text-lg font-bold leading-3 mt-2 dark:text-stone-200">
+                                                <div className="self-stretch text-stone-600 text-lg font-bold leading-5 mt-0.5 dark:text-stone-200">
                                                     {companyAbb}
                                                 </div>
                                             </div>
