@@ -64,7 +64,7 @@ const Experience = () => {
                                                 <div className="self-stretch text-slate-500 text-xs font-normal leading-3 tracking-tight dark:text-stone-300">
                                                     {jobTitle}
                                                 </div>
-                                                <div className="self-stretch text-stone-600 text-lg font-bold leading-5 mt-0.5 dark:text-stone-200">
+                                                <div className="self-stretch text-stone-600 text-lg font-bold leading-5  break-all whitespace-break-spaces mt-0.5 dark:text-stone-200">
                                                     {companyAbb}
                                                 </div>
                                             </div>

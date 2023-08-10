@@ -18,7 +18,7 @@ export default {
             hireDate: '2005-3', // Date of hire
             lastDay: '2018-12', // Last day of work
             companyFullname: 'Trip', // Full name of the company
-            companyAbb: 'Trip.com Trip.com Trip.com Trip.com', // Abbreviation of the company name
+            companyAbb: 'Trip.comTrip.comTrip.comTrip.com', // Abbreviation of the company name
 
             jobTitle: 'UI/UX Designer',
             city: 'Shanghai', // City of employment
